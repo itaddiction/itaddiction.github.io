@@ -1,0 +1,90 @@
+/* med inspiration fra scrimba flexbox kursus https://scrimba.com/g/gflexbox */
+
+/*Global*/
+
+.container > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff9e0;
+}
+
+html,
+body {
+    background-color: #fff9e0;
+    margin: 10px;
+}
+
+.wrapper {
+    margin-top: 72px;
+}
+
+.container > div:nth-child(1n) {
+    background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+    background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+    background-color: #0894a7;
+}
+
+.container > div:nth-child(4n) {
+    background-color: #0894a7;
+}
+
+.container {
+    margin-bottom: 2%;
+    border: 5px solid #d47c3c;
+    display: flex;
+    height: 100px;
+}
+
+/*SPECIFIC FLEXBOX RULES FOR THE INDIVIDUAL CONTAINERS*/
+
+/*JUSTIFY-CONTENT*/
+
+.justify-content {
+    justify-content: space-around;
+}
+
+/* justify-content values: flex-start flex-end center space-around
+space-between space-evenly */
+
+/*ALIGN-ITEMS*/
+
+.align-items {
+    align-items: flex-end;
+}
+
+/*ALIGN-SELF*/
+
+.align-self .contact {
+    align-self: flex-end;
+}
+
+.align-self .profile {
+    align-self: flex-start;
+}
+
+.align-self .about {
+    align-self: center;
+}
+
+/*FLEX*/
+
+.flex > div {
+    flex: 1;
+    /* flex values: flex-grow, flex-shrink, flex-basis */
+}
+
+/*PERFECT CENTER - flex-wrap added to make items wrap if screen is too small*/
+
+.perfect-center {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    flex-wrap: wrap;
+}
