@@ -1,4 +1,5 @@
-/* med inspiration fra scrimba flexbox kursus https://scrimba.com/g/gflexbox */
+/* with inspiration from scrimba flexbox course https://scrimba.com/g/gflexbox.
+Please try to change properties and values to get an idea of how it works*/
 
 /*Global*/
 
@@ -12,7 +13,6 @@
 html,
 body {
     background-color: #fff9e0;
-    margin: 10px;
 }
 
 .wrapper {
@@ -40,6 +40,7 @@ body {
     border: 5px solid #d47c3c;
     display: flex;
     height: 100px;
+    width: 100%;
 }
 
 /*SPECIFIC FLEXBOX RULES FOR THE INDIVIDUAL CONTAINERS*/
@@ -59,6 +60,8 @@ space-between space-evenly */
     align-items: flex-end;
 }
 
+/* align-items values: flex-start, flex-end, center, baseline, stretch (default)*/
+
 /*ALIGN-SELF*/
 
 .align-self .contact {
@@ -73,11 +76,13 @@ space-between space-evenly */
     align-self: center;
 }
 
+/* align-self values: flex-start, flex-end, center, baseline, stretch (default)*/
+
 /*FLEX*/
 
 .flex > div {
     flex: 1;
-    /* flex values: flex-grow, flex-shrink, flex-basis */
+    /* flex values: flex-grow, flex-shrink, flex-basis. flex is short for all three in one and flex: 1; sets values to 1 1 0 in grow, shrink and basis */
 }
 
 /*PERFECT CENTER - flex-wrap added to make items wrap if screen is too small*/
@@ -85,6 +90,30 @@ space-between space-evenly */
 .perfect-center {
     align-items: center;
     justify-content: center;
-    height: 200px;
+    min-height: 200px;
+    /*overwrites height on container - if this is a fixed height, the content will overflow and min-height makes it bigger than content in order to display the centering*/
     flex-wrap: wrap;
+    flex: 1 0 auto;
+}
+
+/*Note that flex-wrap default is nowrap which causes overflow - try resizing browser and see on the containers above. flex-wrap properties: nowrap (default), wrap, wrap-reverse */
+
+/*RESPONSIVE - flex-wrap and flex added in media queries to make it fit in small screens*/
+
+@media all and (max-width: 600px) {
+    .wrap {
+        flex-wrap: wrap;
+        height: auto;
+        /*overwrites height on container - if this is a fixed height, the content will overflow*/
+    }
+    .responsive > div {
+        flex: 1 1 50%;
+    }
+    /*responsive class is added to add flex to only this container*/
+}
+
+@media all and (max-width: 400px) {
+    .responsive > div {
+        flex: 1 1 100%;
+    }
 }
