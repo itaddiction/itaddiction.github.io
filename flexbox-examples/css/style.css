@@ -39,7 +39,7 @@ body {
     margin-bottom: 2%;
     border: 5px solid #d47c3c;
     display: flex;
-    height: 100px;
+    min-height: 100px;
     width: 100%;
 }
 
