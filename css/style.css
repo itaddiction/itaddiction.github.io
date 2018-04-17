@@ -22,22 +22,14 @@
     font-size: 2em;
 }
 
-.rounded-circle {
-    border-radius: 50%;
+img {
+    max-width: 100%;
 }
 
-.flex-container {
-    display: flex;
-    flex: 1;
-    margin-bottom: 2%;
-    justify-content: center;
-    align-items: center;
+.top-image {
+    width: 40%;
 }
 
-.flex-container img {
-    width: 100%;
-    padding: 1%;
-}
 
 /*Navigation with flexbox edited to mobile first from https://codepen.io/AJamesL/pen/MEjYgJ */
 
@@ -88,6 +80,95 @@ header {
     display: none;
 }
 
+
+/*GRID ON MEDIA ITEM FROM INDEX FILE*/
+
+.media {
+    margin: 2em;
+    border: 2px solid teal;
+    padding: 10px;
+}
+
+.media > .title {
+    grid-area: title;
+}
+
+.media > .img {
+    grid-area: img;
+}
+
+.media > .content {
+    grid-area: bd;
+}
+
+.media > .footer {
+    grid-area: ft;
+}
+
+.media {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-areas: "title" "img" "bd" "ft";
+}
+
+.media .footer {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.media a {
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+
+    /* clearfix*/
+    .media:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .media .img {
+        float: left;
+    }
+
+    .media.media-flip .img {
+        float: right;
+
+    }
+
+    @supports(display: grid) {
+        /* override */
+        .media > *,
+        .media.media-flip > * {
+            margin: 0;
+        }
+        .media .img,
+        .media.media-flip .img {
+            width: auto;
+            margin: 0;
+        }
+        .media:after {
+            content: none;
+        }
+
+        .media {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            grid-template-columns: 40% 3fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "img title" "img bd" "ft ft";
+        }
+
+        .media.media-flip {
+            grid-template-columns: 3fr 40%;
+            grid-template-areas: "title img" "bd img" "ft ft";
+        }
+    }
+}
+
 /*CARD STYLING SUB PAGES*/
 
 .card {
@@ -95,6 +176,7 @@ header {
     transition: 0.3s;
     border-radius: 5px;
     margin: 1em;
+    width: 100%;
 }
 
 .card:hover {
@@ -113,6 +195,13 @@ header {
     text-decoration: none;
     color: black;
 }
+
+.flex-container {
+    display: flex;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
 
 /*FOOTER*/
 
@@ -228,8 +317,4 @@ footer {
     .card {
         width: 22%;
     }
-}
-
-.top-image {
-    width: 50%;
 }
