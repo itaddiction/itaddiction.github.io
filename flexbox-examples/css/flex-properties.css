@@ -100,7 +100,7 @@ space-between space-evenly */
 
 /*RESPONSIVE - flex-wrap and flex added in media queries to make it fit in small screens*/
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
     .wrap {
         flex-wrap: wrap;
         height: auto;
@@ -112,7 +112,7 @@ space-between space-evenly */
     /*responsive class is added to add flex to only this container*/
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 480px) {
     .responsive > div {
         flex: 1 1 100%;
     }
