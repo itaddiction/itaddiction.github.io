@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox examples</title>
+    <meta name="author" content="Michelle Andreassen">
+    <meta name="description" content="Examples of css grid galleries.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/grid-flex.css">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="main-header">
+        <section id="logo-burger">
+            <h1 id="logo"><a href="../index.html">ITAddiction</a></h1>
+            <label for="toggle">&#9776;</label>
+        </section>
+        <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+            <!-- This has to be outside of #logo-burger to work. #main-nav cannot be selected when this is in a container -->
+            <ul id="main-nav">
+                <li><a class="active" href="../rwd.html">RWD</a></li>
+                <li><a href="../flexbox.html">Flexbox</a></li>
+                <li><a href="../grid.html">Grid</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <h3>This page below is using grid for the layout and flexbox for the menu in the header</h3>
+    <br>
+    <p>GRID PAGE WITH FLEXBOX NAVIGATION</p>
+    <div class="grid-page">
+        <!-- normally this navigation would be in nav tags but it was easier to leave it out for this example -->
+        <ul class="header">
+            <li>HOME</li>
+            <li>SEARCH</li>
+            <li>LOGOUT</li>
+        </ul>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+
+</html>

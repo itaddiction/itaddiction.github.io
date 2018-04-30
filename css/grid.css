@@ -1,0 +1,33 @@
+/* GRID LAYOUT */
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: aside;
+    background-color: beige;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'aside' 'footer';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-areas: 'header header header header' 'main main main aside' 'footer footer footer footer';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}

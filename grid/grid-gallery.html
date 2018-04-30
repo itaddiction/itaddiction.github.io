@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox examples</title>
+    <meta name="author" content="Michelle Andreassen">
+    <meta name="description" content="Examples of css grid galleries.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/grid-gallery.css">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="main-header">
+        <section id="logo-burger">
+            <h1 id="logo"><a href="../index.html">ITAddiction</a></h1>
+            <label for="toggle">&#9776;</label>
+        </section>
+        <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+            <!-- This has to be outside of #logo-burger to work. #main-nav cannot be selected when this is in a container -->
+            <ul id="main-nav">
+                <li><a class="active" href="../rwd.html">RWD</a></li>
+                <li><a href="../flexbox.html">Flexbox</a></li>
+                <li><a href="../grid.html">Grid</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!--gallery from scrimba - learn css grid -->
+    <h1>This gallery is taken with inspiration from scrimba - learn css grid</h1>
+    <div class="gridcontainer">
+        <div class="big"><img src="../images/chip.JPG" /></div>
+        <div class="vertical"><img src="../images/sign.JPG"></div>
+        <div class="horizontal"><img src="../images/canarian-landscape.JPG" /></div>
+        <div><img src="../images/ladybird-flower.JPG" /></div>
+        <div><img src="../images/tree.JPG" /></div>
+        <div class="big"><img src="../images/island-flowers.JPG" /></div>
+        <div><img src="../images/chipmunk-back.JPG" /></div>
+        <div class="vertical"><img src="../images/sign.JPG" /></div>
+        <div><img src="../images/ladybird-flower.JPG" /></div>
+        <div class="horizontal"><img src="../images/canarian-landscape.JPG" /></div>
+        <div><img src="../images/ladybird-flower.JPG" /></div>
+        <div class="big"><img src="../images/tree.JPG" /></div>
+        <div><img src="../images/chipmunk-back.JPG" /></div>
+        <div class="horizontal"><img src="../images/chip.JPG" /></div>
+    </div>
+    <!-- scrimba gallery end -->
+    <br>
+    <!-- gallery found online -->
+    <h1>This can be used for gallery or layout in general</h1>
+    <div class="wrapper">
+        <header class="header">My header</header>
+
+        <div class="panel">Panel A</div>
+        <div class="panel">Panel B</div>
+        <div class="panel tall-panel">Panel C</div>
+        <div class="panel">Panel D</div>
+        <div class="panel">Panel E</div>
+        <div class="panel">Panel F</div>
+        <div class="panel tall-panel">Panel G</div>
+        <div class="panel tall-panel">Panel H</div>
+        <div class="panel">Panel I</div>
+        <div class="panel">Panel J</div>
+
+        <footer class="footer">My footer</footer>
+    </div>
+</body>
+
+</html>
